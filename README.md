@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/Enfield/turtitar-project.svg?branch=master)](https://travis-ci.com/Enfield/turtitar-project)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1748eabe39c0591067fa/maintainability)](https://codeclimate.com/github/Enfield/turtitar-project/maintainability)
-[![codecov](https://codecov.io/gh/Enfield/turtitar-project/branch/master/graph/badge.svg)](https://codecov.io/gh/Enfield/turtitar-project)
+[![codecov](https://codecov.io/gh/Enfield/turtitar/branch/master/graph/badge.svg)](https://codecov.io/gh/Enfield/turtitar-project)
 
 # Turtitar project
 > A simple web service for money transfers between accounts 
