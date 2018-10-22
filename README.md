@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/Enfield/turtitar.svg?branch=master)](https://travis-ci.com/Enfield/turtitar)
-[![Maintainability](https://api.codeclimate.com/v1/badges/05603b281eb46896f40e/maintainability)](https://codeclimate.com/github/Enfield/turtitar/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1748eabe39c0591067fa/maintainability)](https://codeclimate.com/github/Enfield/turtitar-project/maintainability)
 [![codecov](https://codecov.io/gh/Enfield/turtitar/branch/master/graph/badge.svg)](https://codecov.io/gh/Enfield/turtitar)
 
 # Turtitar project
