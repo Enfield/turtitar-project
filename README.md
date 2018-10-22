@@ -55,7 +55,8 @@ GET /api/v1/accounts/79837f37-a033-4f8e-b7ca-1a99149cdbd8 HTTP/1.1
 Host: localhost:8080
 Content-Type: application/json
 Accept: */*
-Content-Length: 0
+Content-Length: 0  
+
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 62
