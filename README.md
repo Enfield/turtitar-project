@@ -16,7 +16,7 @@
 *A: What about concurrency? Is it thread-safe?*  
 *Q: The High Concurrency strategy used: https://www.ibm.com/developerworks/java/library/j-ts5/index.html (TL;DR; 'SELECT ... FOR UPDATE')*
 
-*A: Why not 100% coverage?*  
+*A: Why only 91% coverage? Why not 100%?*  
 *Q: It's only 11-lines of untested code (click badges for proof), six in main class and two is a annotation for example.* 
 
 ## Installation
