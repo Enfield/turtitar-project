@@ -47,6 +47,7 @@ class AccountTest {
 		Account account1 = new Account.Builder().id(id).amount(amount).build();
 		Account account2 = new Account.Builder().id(id).amount(amount).build();
 		assertTrue(account1.equals(account2));
+		assertFalse(account1.equals(null));
 	}
 
 	@Test

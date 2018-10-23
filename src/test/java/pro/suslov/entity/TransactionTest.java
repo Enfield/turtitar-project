@@ -63,6 +63,7 @@ class TransactionTest {
 		Transaction transaction1 = new Transaction.Builder().from(from).to(to).amount(amount).build();
 		Transaction transaction2 = new Transaction.Builder().from(from).to(to).amount(amount).build();
 		assertTrue(transaction1.equals(transaction2));
+		assertFalse(transaction1.equals(null));
 	}
 
 	@Test
