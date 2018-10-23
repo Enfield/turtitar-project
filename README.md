@@ -14,7 +14,7 @@
 *Q: Jersey + Grizzly + H2Database*
 
 *A: What about concurrency? Is it thread-safe?*  
-*Q: The High Concurrency strategy used: https://www.ibm.com/developerworks/java/library/j-ts5/index.html (TL;DR; 'SELECT ... FOR UPDATE')*
+*Q: 'The High Concurrency Strategy' is used: https://www.ibm.com/developerworks/java/library/j-ts5/index.html (TL;DR; 'SELECT ... FOR UPDATE')*
 
 *A: Why not 100% coverage?*  
 *Q: It's only 8-lines of untested code (click badges for proof), six in main class and two is a annotation in exception handlers.* 
