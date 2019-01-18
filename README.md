@@ -3,7 +3,7 @@
 [![codecov](https://codecov.io/gh/Enfield/turtitar-project/branch/master/graph/badge.svg)](https://codecov.io/gh/Enfield/turtitar-project)
 
 # Turtitar project
-> A simple web service for money transfers between accounts 
+> Demo Project. A simple web service for money transfers between accounts 
 
 ## FAQ
 
