@@ -39,7 +39,7 @@ public class Transaction {
 	@Override
 	public boolean equals(Object o) {
 		if (o == null) return false;
-		Transaction that = (Transaction) o;
+		var that = (Transaction) o;
 		return Objects.equals(from, that.from) && Objects.equals(to, that.to) && Objects.equals(amount, that.amount);
 	}
 

@@ -29,7 +29,7 @@ public class Account {
 	@Override
 	public boolean equals(Object o) {
 		if (o == null) return false;
-		Account that = (Account) o;
+		var that = (Account) o;
 		return Objects.equals(id, that.id) && Objects.equals(amount, that.amount);
 	}
 

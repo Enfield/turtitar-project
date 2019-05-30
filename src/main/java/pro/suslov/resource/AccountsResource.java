@@ -19,7 +19,7 @@ public class AccountsResource {
 	@GET
 	public Response getAccount(@PathParam("id") String id) {
 		log.debug("getAccount is called for {id:%s}", id);
-		Account account = accountService.getById(id);
+		var account = accountService.getById(id);
 		if (account == null) {
 			return Response.ok().build();
 		}
@@ -31,7 +31,7 @@ public class AccountsResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response createAccount(Account account) {
 		log.debug("createAccount is called for {amount:%s}", account.getAmount());
-		Account createdAccount = accountService.create(account);
+		var createdAccount = accountService.create(account);
 		return Response.ok(createdAccount).build();
 	}
 

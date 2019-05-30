@@ -17,11 +17,11 @@ public class AccountRepository {
 	private DataSource dataSource = new DataSource();
 
 	public Account insert(Account account) {
-		String sql = "insert into accounts (id, amount) values (?, ?)";
+		var sql = "insert into accounts (id, amount) values (?, ?)";
 		account.setId(UUID.randomUUID().toString());
 		log.debug("Insert account with parameters {id:%s amount:%s}'", account.getId(), account.getAmount());
-		try (Connection conn = dataSource.getConnection(DataSource.INIT_STRING);
-			 PreparedStatement stmt = conn.prepareStatement(sql)) {
+		try (var conn = dataSource.getConnection(DataSource.INIT_STRING);
+			 var stmt = conn.prepareStatement(sql)) {
 			stmt.setString(1, account.getId());
 			stmt.setBigDecimal(2, account.getAmount());
 			stmt.executeUpdate();
@@ -33,12 +33,12 @@ public class AccountRepository {
 	}
 
 	public Account find(String id) {
-		String sql = "select id, amount from accounts where id = ?";
+		var sql = "select id, amount from accounts where id = ?";
 		log.debug("Find account by {id:%s}'", id);
-		try (Connection conn = dataSource.getConnection(DataSource.INIT_STRING);
-			 PreparedStatement stmt = conn.prepareStatement(sql)) {
+		try (var conn = dataSource.getConnection(DataSource.INIT_STRING);
+			 var stmt = conn.prepareStatement(sql)) {
 			stmt.setString(1, id);
-			ResultSet rs = stmt.executeQuery();
+			var rs = stmt.executeQuery();
 			if (rs.next()) {
 				return new Account.Builder()
 						.id(rs.getString(1))

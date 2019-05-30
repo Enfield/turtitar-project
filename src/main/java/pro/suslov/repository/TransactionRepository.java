@@ -20,20 +20,20 @@ public class TransactionRepository {
 
 	public boolean insert(Transaction transaction) {
 		log.debug("Update amount for accounts {from:%s; to:%s; amount:%s}'", transaction.getFrom(), transaction.getTo());
-		try (Connection conn = dataSource.getConnection(DataSource.INIT_STRING)) {
+		try (var conn = dataSource.getConnection(DataSource.INIT_STRING)) {
 			conn.setAutoCommit(false);
 			conn.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 			try {
 				//LOCK FROM
-				Statement stmtFrom = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
-				ResultSet rsFrom = stmtFrom.executeQuery("select id, amount from accounts where id = '" + transaction.getFrom() + "' for update");
+				var stmtFrom = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+				var rsFrom = stmtFrom.executeQuery("select id, amount from accounts where id = '" + transaction.getFrom() + "' for update");
 				if (rsFrom.next()) {
 					//LOCK TO
-					Statement stmtTo = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
-					ResultSet rsTo = stmtTo.executeQuery("select id, amount from accounts where id = '" + transaction.getTo() + "' for update");
+					var stmtTo = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+					var rsTo = stmtTo.executeQuery("select id, amount from accounts where id = '" + transaction.getTo() + "' for update");
 					if (rsTo.next()) {
-						BigDecimal fromAmount = rsFrom.getBigDecimal(2);
-						BigDecimal toAmount = rsTo.getBigDecimal(2);
+						var fromAmount = rsFrom.getBigDecimal(2);
+						var toAmount = rsTo.getBigDecimal(2);
 
 						//BALANCE CHECK
 						if (fromAmount.subtract(transaction.getAmount()).signum() == -1) {
